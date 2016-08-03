@@ -1,0 +1,23 @@
+kint/*
+*.zip
+.DS_Store
+
+backend/application/cache/*
+!application/cache/index.html
+!application/cache/.htaccess
+
+backend/application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
+
+backend/user_guide/*
+backend/user_guide_src/build/*
+backend/user_guide_src/cilexer/build/*
+backend/user_guide_src/cilexer/dist/*
+backend/user_guide_src/cilexer/pycilexer.egg-info/*
+/vendor/
+
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
