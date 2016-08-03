@@ -28,7 +28,7 @@ ini_set('display_errors', '1');
 		//Minutes to authorize, change to suit your needs
 		$minutes = 3600 + ($dias * 24 * 60);
 #		echo $minutes;
-		sendAuthorization($mac,$minutes,$url);
+		sendAuthorization($mac,$minutes);
 	        echo '
 
 			<!DOCTYPE html>
@@ -38,10 +38,25 @@ ini_set('display_errors', '1');
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 
-    <title>Landing Hotel</title>
+    <title>Diplomatic Hotel</title>
         <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" href="css/my.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
+
+<script>
+window.onload = function(){
+  var theDelay = 10;
+  var timer = setTimeout("showText()",theDelay*1000)
+  var timer = setTimeout("hideText()",theDelay*1000)
+}
+
+function showText(){
+  document.getElementById("delayedShowText").style.visibility = "visible";
+  document.getElementById("delayedHideText").style.visibility = "hidden";
+}
+
+</script>
+
 </head>
 <body>
     
@@ -57,7 +72,13 @@ ini_set('display_errors', '1');
     </div>
     <div class="row">   <!--texto Bienvenida-->
 
-        <div class=" col-xs-12 col-lg-12 text-center">
+        <div class=" col-xs-12 col-lg-12 text-center" id="delayedHideText" style="visibility:visible">
+
+            <h1>Por favor espere...</h1>
+
+        </div>
+
+        <div class=" col-xs-12 col-lg-12 text-center" id="delayedShowText" style="visibility:hidden">
 
             <h1>Gracias por elegir Diplomatic Hotel</h1>
  <br><h3>Su dispositivo se encuentra conectado a nuestra red WiFi.</h3>
@@ -78,7 +99,7 @@ ini_set('display_errors', '1');
           
           <a href="https://www.instagram.com/diplomatichotel/"><i class="fa fa-instagram fa-1x social"></i></a>
           </div>
-        <center><p><small>www.diplomatichotel.com.ar</small></p></center>
+        <center><p><small><a href="http://www.diplomatichotel.com.ar/">www.diplomatichotel.com.ar</a></small></p></center>
 
       </footer> 
     </div>

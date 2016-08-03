@@ -27,6 +27,10 @@ class Home extends CI_Controller {
     }
 
 
+d($_SESSION);
+$tuvieja= ["hola", "prueba"];
+$this->kint->dump($tuvieja);
+
   }
 
 

@@ -89,7 +89,7 @@ if (!$execute) {
 
 
 
-function sendAuthorization($id, $minutes, $url) {
+function sendAuthorization($id, $minutes) {
 	global $unifiServer;
 	global $unifiUser;
 	global $unifiPass;
@@ -172,7 +172,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 //	curl_setopt($ch, CURLOPT_URL, $unifiServer.'/logout');
 	curl_exec ($ch);
 	curl_close ($ch);
-	sleep(8); // Small sleep to allow controller time to authorize
+//	sleep(12); // Small sleep to allow controller time to authorize
 //	header('Location: ' . $url);//$_SESSION['url']);
 }
 ?>

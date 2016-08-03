@@ -39,6 +39,24 @@
 
         <?php echo form_close(); ?>
 
-        <?php echo validation_errors(); ?>
+        <?php echo validation_errors(); 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        d($arrOpt);
+
+d($arrpass);
+        
+        
+        
+        
+        
+        ?>
   </body>
 </html>

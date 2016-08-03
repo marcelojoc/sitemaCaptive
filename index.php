@@ -7,9 +7,9 @@ ini_set('display_errors', '0');
 	if($_GET['id']) {
 		$id = $_GET['id'];
 	} else {	
-//		$id="20:cf:30:84:00:68";
-		echo "<h1>Acceso directo no permitido</h1>";
-		exit();
+		$id="20:cf:30:84:00:68";
+//		echo "<h1>Acceso directo no permitido</h1>";
+//		exit();
 	}
 //Get original target URL for redirect after auth
 	if ($_GET['url']) {
@@ -37,7 +37,7 @@ ini_set('display_errors', '0');
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 
-    <title>Landing Hotel</title>
+    <title>Diplomatic Hotel</title>
 
         <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" href="css/my.css">

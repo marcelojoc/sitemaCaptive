@@ -8,6 +8,8 @@ class Sitio extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->view('sitio_view');
 
+// or via shorthand:
+
 
 	}
 }
