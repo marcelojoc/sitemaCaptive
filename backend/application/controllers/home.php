@@ -8,30 +8,39 @@ class Home extends CI_Controller {
     parent::__construct();
     // 		carga de helper para url y modelo de usuario
 	   $this->load->helper('url');
+
   }
 
 
   public function index()
   {
 
-
-
     if ($this->session->userdata('logged_in')!= NULL) {
       # code...
       echo " hay sesion";
       $this->load->view('backend/home_view');
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
     } else {
       echo " no hay sesion";
-      redirect('/admin/login/','refresh');
+      redirect('login/','refresh');
     }
 
-
-d($_SESSION);
-$tuvieja= ["hola", "prueba"];
-$this->kint->dump($tuvieja);
-
   }
-
 
 }

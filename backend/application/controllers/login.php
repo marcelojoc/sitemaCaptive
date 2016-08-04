@@ -50,7 +50,7 @@ class Login extends CI_Controller {
 
 				$this->form_validation->set_rules('username', 'username', 'trim|required|xss_clean');
 
-				$this->form_validation->set_rules('password', 'password', 'trim|required|xss_clean|callback_check_database');
+				$this->form_validation->set_rules('txtpass', 'txtpass', 'trim|required|xss_clean|callback_check_database');
 
 				if($this->form_validation->run() == FALSE)
 				{
@@ -61,9 +61,9 @@ class Login extends CI_Controller {
 				else
 				{
 					//Accede al area privada
-					redirect('/admin/home/','refresh');
+					redirect('/home/','refresh');
 				}
-
+// 
 			}else {
 				//No hay datos POST entonces va  a la vista de login		
 				$this->load->view('backend/login_view'); // muestro la vista de form login
@@ -74,13 +74,14 @@ class Login extends CI_Controller {
 	
 
 
-		function check_database($password)  // callback para la validacion
+		function check_database($txtpass)  // callback para la validacion
 		{
+
 				//traigo el valor del form por post
 				$username = $this->input->post('username');
 
 				//consulta la base de datos
-				$result = $this->usuario_model->login($username, $password);
+				$result = $this->usuario_model->login($username, $txtpass);
 
 			if($result)
 			{
