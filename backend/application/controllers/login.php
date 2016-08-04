@@ -28,7 +28,7 @@ class Login extends CI_Controller {
 			// comprueba si hay sesion configurada
 			if($this->session->userdata('logged_in')){
 
-				$this->load->view('backend/home'); // muestro la vista de form login
+				$this->load->view('backend/home_view'); // muestro la vista de form login
 
 			} else {
 				
@@ -61,7 +61,7 @@ class Login extends CI_Controller {
 				else
 				{
 					//Accede al area privada
-					redirect('/home/','refresh');
+					redirect('home/','refresh');
 				}
 // 
 			}else {

@@ -17,24 +17,14 @@ class Home extends CI_Controller {
 
     if ($this->session->userdata('logged_in')!= NULL) {
       # code...
-      echo " hay sesion";
-      $this->load->view('backend/home_view');
+ 
+
+    $this->load->view("backend/head_view"); 
+    $this->load->view("backend/menu_view"); 
+    $this->load->view('backend/home_view');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
+    $this->load->view("backend/footer_view");
 
     } else {
       echo " no hay sesion";
