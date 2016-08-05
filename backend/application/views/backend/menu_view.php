@@ -2,8 +2,9 @@
 		  	<div class="sidebar content-box" style="display: block;">
                 <ul class="nav">
                     <!-- Main menu -->
-                    <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> Visitantes</a></li>
-                    <li><a href="calendar.html"><i class="glyphicon glyphicon-calendar"></i> Configuracion</a></li>
+                    <li><a href="<?php echo base_url()."index.php/home/"?>"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                    <li ><a href="<?php echo base_url()."index.php/visita/"?>"><i class="glyphicon glyphicon-plane"></i> Visitantes</a></li>
+                    <li><a href="calendar.html"><i class="glyphicon glyphicon-cog"></i> Configuracion</a></li>
                     <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i>datos</a></li>
 
                     <li class="submenu">
@@ -19,4 +20,5 @@
                     </li>
                 </ul>
              </div>
+
 		  </div>

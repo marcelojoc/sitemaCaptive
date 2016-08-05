@@ -4,11 +4,20 @@
     <title>Bootstrap Admin Theme v3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    
-		<link rel="stylesheet" href="<?php echo base_url().'lib/bootstrap/css/bootstrap.min.css'?>">
+    	
+<?php 
+
+foreach($css_files as $file): ?>
+    <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
+ 
+<?php endforeach; ?>
+<?php foreach($js_files as $file): ?>
+ 
+    <script src="<?php echo $file; ?>"></script>
+<?php endforeach; ?>
+
+	<link rel="stylesheet" href="<?php echo base_url().'lib/bootstrap/css/bootstrap.min.css'?>">
 		<link rel="stylesheet" href="<?php echo base_url().'lib/bootstrap/css/styles.css'?>">
-
-
 
     <!-- styles -->
 

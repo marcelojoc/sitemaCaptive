@@ -1,13 +1,5 @@
 
-
-     <h1>Acceso Permitido a: <?php echo $this->session->logged_in['nombre'] ." USUARIO: ".$this->session->logged_in['nick'] 
-                             // los datos de sesion se acceden de esa manera
-                             // $this->session->logged_in['el nombre del campo']
-     ?> 
-     </h1>
-
-
-		  <div class="col-md-10">
+<div class="col-md-10">
 		  	<div class="row">
 		  		<div class="col-md-6">
 		  			<div class="content-box-large">
@@ -285,118 +277,7 @@
 								<td class="center">1.8</td>
 								<td class="center">A</td>
 							</tr>
-							<tr class="gradeA">
-								<td>Webkit</td>
-								<td>Safari 1.2</td>
-								<td>OSX.3</td>
-								<td class="center">125.5</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Webkit</td>
-								<td>Safari 1.3</td>
-								<td>OSX.3</td>
-								<td class="center">312.8</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Webkit</td>
-								<td>Safari 2.0</td>
-								<td>OSX.4+</td>
-								<td class="center">419.3</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Webkit</td>
-								<td>Safari 3.0</td>
-								<td>OSX.4+</td>
-								<td class="center">522.1</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Webkit</td>
-								<td>OmniWeb 5.5</td>
-								<td>OSX.4+</td>
-								<td class="center">420</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Webkit</td>
-								<td>iPod Touch / iPhone</td>
-								<td>iPod</td>
-								<td class="center">420.1</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Webkit</td>
-								<td>S60</td>
-								<td>S60</td>
-								<td class="center">413</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera 7.0</td>
-								<td>Win 95+ / OSX.1+</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera 7.5</td>
-								<td>Win 95+ / OSX.2+</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera 8.0</td>
-								<td>Win 95+ / OSX.2+</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera 8.5</td>
-								<td>Win 95+ / OSX.2+</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera 9.0</td>
-								<td>Win 95+ / OSX.3+</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera 9.2</td>
-								<td>Win 88+ / OSX.3+</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera 9.5</td>
-								<td>Win 88+ / OSX.3+</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera for Wii</td>
-								<td>Wii</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Nokia N800</td>
-								<td>N800</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
+
 							<tr class="gradeA">
 								<td>Presto</td>
 								<td>Nintendo DS browser</td>
@@ -404,69 +285,7 @@
 								<td class="center">8.5</td>
 								<td class="center">C/A<sup>1</sup></td>
 							</tr>
-							<tr class="gradeC">
-								<td>KHTML</td>
-								<td>Konqureror 3.1</td>
-								<td>KDE 3.1</td>
-								<td class="center">3.1</td>
-								<td class="center">C</td>
-							</tr>
-							<tr class="gradeA">
-								<td>KHTML</td>
-								<td>Konqureror 3.3</td>
-								<td>KDE 3.3</td>
-								<td class="center">3.3</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>KHTML</td>
-								<td>Konqureror 3.5</td>
-								<td>KDE 3.5</td>
-								<td class="center">3.5</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeX">
-								<td>Tasman</td>
-								<td>Internet Explorer 4.5</td>
-								<td>Mac OS 8-9</td>
-								<td class="center">-</td>
-								<td class="center">X</td>
-							</tr>
-							<tr class="gradeC">
-								<td>Tasman</td>
-								<td>Internet Explorer 5.1</td>
-								<td>Mac OS 7.6-9</td>
-								<td class="center">1</td>
-								<td class="center">C</td>
-							</tr>
-							<tr class="gradeC">
-								<td>Tasman</td>
-								<td>Internet Explorer 5.2</td>
-								<td>Mac OS 8-X</td>
-								<td class="center">1</td>
-								<td class="center">C</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Misc</td>
-								<td>NetFront 3.1</td>
-								<td>Embedded devices</td>
-								<td class="center">-</td>
-								<td class="center">C</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Misc</td>
-								<td>NetFront 3.4</td>
-								<td>Embedded devices</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeX">
-								<td>Misc</td>
-								<td>Dillo 0.8</td>
-								<td>Embedded devices</td>
-								<td class="center">-</td>
-								<td class="center">X</td>
-							</tr>
+
 							<tr class="gradeX">
 								<td>Misc</td>
 								<td>Links</td>
@@ -506,7 +325,7 @@
 					</table>
   				</div>
   			</div>
-		  </div>
+</div> <!-- termina el div de 10 columnas -->
 
 
 
