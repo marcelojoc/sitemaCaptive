@@ -44,20 +44,14 @@ class Visita extends CI_Controller {
 
     if ($this->session->userdata('logged_in')!= NULL) {
 
-    $crud = new grocery_CRUD();
- 
-$crud->set_table('creds');
-$output = $crud->render();
+      $plantilla=null;
+      $crud = new grocery_CRUD();
 
+      $crud->set_table('creds');
+      $output = $crud->render();
 
-
-    
-     $header=   $this->load->view("backend/g/head_view", true); 
-     d($output);
-    $this->load->view('backend/visita_g', $output);
-    $this->load->view("backend/menu_view"); 
-
-    $this->load->view("backend/footer_view");
+$this->load->view('backend/visita_g', $output);
+    //d($plantilla);
 
 
     } else {

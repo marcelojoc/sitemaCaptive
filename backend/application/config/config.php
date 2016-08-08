@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/seba_code/backend/';
+$config['base_url'] = 'http://localhost/sitemaCaptive/backend/';
 /*
 |--------------------------------------------------------------------------
 | Index File
