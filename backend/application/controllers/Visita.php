@@ -48,9 +48,15 @@ class Visita extends CI_Controller {
       $crud = new grocery_CRUD();
 
       $crud->set_table('creds');
+      $crud->columns('name','mac','email','checkin','checkout');
+      $crud->display_as('checkin','ingreso')
+           ->display_as('checkout', 'Salida');
+      $crud->unset_add();  // sacar el boton agregar campo
+      $crud->unset_edit();
       $output = $crud->render();
 
 $this->load->view('backend/visita_g', $output);
+
     //d($plantilla);
 
 

@@ -20,7 +20,7 @@
 	           <div class="col-md-6">
 	              <!-- Logo -->
 	              <div class="logo">
-	                 <h1><a href="index.html">Diplomatic Admin</a></h1>
+	                 <h1><a href="">Diplomatic Admin</a></h1>
 	              </div>
 	           </div>
 
