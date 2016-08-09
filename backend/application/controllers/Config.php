@@ -1,14 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Config extends CI_Controller {
 
   function __construct()
   {
     parent::__construct();
     // 		carga de helper para url y modelo de usuario
       $this->load->helper('url');
-      $this->load->model('huesped_model');
+      $this->load->model('Usuario_model');
 
       $this->load->library('grocery_CRUD');  
 
@@ -46,15 +46,16 @@ class Home extends CI_Controller {
       
       $crud = new grocery_CRUD();
 
-      $crud->set_table('creds');
-      $crud->columns('name','mac','email','checkin','checkout');
-      $crud->display_as('checkin','ingreso')
-           ->display_as('checkout', 'Salida');
-      $crud->unset_add();  // sacar el boton agregar campo
-      $crud->unset_edit();
+      $crud->set_table('user');
+      $crud->columns('nombre','nick_name');
+      $crud->display_as('nombre','Usuario')
+           ->display_as('nick_name', 'nick');
+       $crud->unset_export();  // sacar el boton agregar campo
+       $crud->unset_add();
+       $crud->unset_print();
       $output = $crud->render();
 
-     $this->load->view('backend/visita_g', $output);
+      $this->load->view('backend/config_view', $output);
 
     //d($plantilla);
 

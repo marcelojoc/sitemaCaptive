@@ -22,5 +22,10 @@ Class Usuario_model extends CI_Model
    }
  }
 
+
+
+
+ 
+
 }
-?>
+
