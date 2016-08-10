@@ -43,9 +43,13 @@ class Home extends CI_Controller {
 
     if ($this->session->userdata('logged_in')!= NULL) {
 
+$minvalue= '2016-08-01';
+$maxvalue= '2016-08-02';
       
       $crud = new grocery_CRUD();
-
+      $crud->where("checkin BETWEEN '$minvalue' AND '$maxvalue'");
+      $crud->where("huesped = 0");
+      $crud->set_subject('huespedes entre   y entre');
       $crud->set_table('creds');
       $crud->columns('name','mac','email','checkin','checkout');
       $crud->display_as('checkin','ingreso')
