@@ -43,16 +43,17 @@ class Config extends CI_Controller {
 
     if ($this->session->userdata('logged_in')!= NULL) {
 
-      
+      $usuario= $this->session->logged_in['nombre'];
       $crud = new grocery_CRUD();
-
+      $crud->where("nombre = '$usuario'");
       $crud->set_table('user');
       $crud->columns('nombre','nick_name');
       $crud->display_as('nombre','Usuario')
            ->display_as('nick_name', 'nick');
-       $crud->unset_export();  // sacar el boton agregar campo
+       $crud->unset_export();  // sacar el boton agregar  imprimir y eliminar
        $crud->unset_add();
        $crud->unset_print();
+       $crud->unset_delete();
       $output = $crud->render();
 
       $this->load->view('backend/config_view', $output);

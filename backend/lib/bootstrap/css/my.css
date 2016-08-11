@@ -1,15 +1,4 @@
-@font-face {
-    font-family: "Saya";
-    font-style: normal;
-    font-weight: normal;
-    src: url("../fonts/Saya Serif FY Light Italic.woff") format("woff"), url("../fonts/SayaSerifFY-LtItalic.otf") format("opentype");
-}
 
-body{
-
-font-family: "Saya";
-font-size: 1.9em;
-}
 
 
 /*cambio en el boton*/

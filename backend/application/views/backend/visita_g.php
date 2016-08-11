@@ -58,33 +58,35 @@ foreach($css_files as $file): ?>
     <div class="page-content">
     	<div class="row">
 
-		  <div class="col-md-2">
-		  	<div class="sidebar content-box" style="display: block;">
-                <ul class="nav">
-                    <!-- Main menu -->
-                    <li><a href="<?php echo base_url()."index.php/home/"?>"><i class="glyphicon glyphicon-home"></i> Home</a></li>
-                    <li><a href="<?php echo base_url()."index.php/config/"?>"><i class="glyphicon glyphicon-cog"></i> Configuracion</a></li>
-                    <li><a href="<?php echo base_url()."index.php/login/out"?>"><i class="glyphicon glyphicon-stats"></i>Salir</a></li>
-                </ul>
-             </div>
 
-		  </div>
+       <?php include "menu_view.php"   ?>
 
+		<div class="col-md-10">
+				<div class="row">
 
-<div class="col-md-10">
-		  	<div class="row">
-		  		<div class="col-md-12">
+					<div class="col-md-12">
+					
+					<!-- aqui grocery -->
+
+					<div class="content-box-header">
+						<div class="panel-title">Busqueda</div>
+
+							<div class="panel-options">
+							<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+							</div>
+						</div>
+						<div class="content-box-large box-with-header" >
+						<?php echo $output?>
+					</div>
+
 				
-				<!-- aqui grocery -->
+					
+					</div>
+				</div>
+		</div> <!-- termina el div de 10 columnas -->
 
-             <?php echo $output?>
-				
-		  		</div>
-		  	</div>
-</div> <!-- termina el div de 10 columnas -->
-
-      </div><!-- Cierro el contenido del bloquero princ -->
-   </div>
+	</div><!-- Cierro el contenido del bloquero princ -->
+</div> <!-- Cierro el page-content -->
 <br>
     <footer>
          <div class="container">

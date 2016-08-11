@@ -114,7 +114,7 @@ class Login extends CI_Controller {
 
 
 
-		function out()
+		function out()   // cierra sesion de usuario
 		{
 		$this->session->unset_userdata('logged_in');
 		session_destroy();
