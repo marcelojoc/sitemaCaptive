@@ -8,8 +8,10 @@ class Home extends CI_Controller {
     parent::__construct();
     // 		carga de helper para url y modelo de usuario
       $this->load->helper('url');
+      $this->load->helper('form');
       $this->load->model('huesped_model');
-      $this->load->library('grocery_CRUD');  
+      $this->load->library('grocery_CRUD'); 
+      $this->load->library('form_validation');
 
   }
 
@@ -34,10 +36,47 @@ class Home extends CI_Controller {
     public function buscar()
   {
 
+
+  // $this->form_validation->set_rules('txtdesde', 'txtdesde', 'trim|required');
+
+  // $this->form_validation->set_rules('txthasta', 'txthasta', 'trim|required');
+
+  // if($this->form_validation->run() == FALSE)
+  // {
+  //   //si falla manda mensaje de error
+  //   d($this->form_validation->run());
+	// 			$this->form_validation->set_message('required','Completar los campos de fechas');
+				
+  // }
+
+  // else
+  // {
+  //   //Accede al area privada
+  //  d($_POST);
+  //  echo('saaaaaaaaaaaaaaaaaaaa');
+  // }
+
+
+
+
     if ($this->session->userdata('logged_in')!= NULL) {
 
-    $minvalue= '2016-08-01';
-    $maxvalue= '2016-08-02';
+      $desde= $this->input->post('txtdesde');
+      $hasta= $this->input->post('txthasta');
+
+
+      if($desde=="" ){
+
+          redirect('home/','refresh');
+          
+      }
+
+
+
+  //d(date_format($minvalue, 'YY-mm-dd'));
+      $minvalue= date("Y-m-d", strtotime(str_replace('/','-',$desde)));
+      $maxvalue= date("Y-m-d", strtotime(str_replace('/','-',$hasta)));
+
       
       $crud = new grocery_CRUD();
       $crud->where("checkin BETWEEN '$minvalue' AND '$maxvalue'");

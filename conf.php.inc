@@ -48,7 +48,7 @@ function auth_user($name,$email,$mac,$fecha,$huesped,$table) {
 		$formatFecha = date("Y-m-d", strtotime($fecha));
 	}else{
 		$huesped=0;
-		$formatFecha= date("Y-m-d");;
+		$formatFecha= date("Y-m-d");
 	};
 
 	$query = "INSERT INTO `$table` (`name`, `email`, `mac`, `checkout`, `checkin`, `huesped` )  VALUES (\"$name\", \"$email\", \"$mac\", \"$formatFecha\", now(), \"$huesped\") ";
