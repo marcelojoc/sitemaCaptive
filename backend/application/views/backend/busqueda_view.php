@@ -130,7 +130,7 @@
                             </div>
                         <div class="checkbox-inline">
                             <label for="checkboxes-1">
-                            <input type="checkbox" name="check2" id="check2" value="2">
+                            <input type="checkbox" name="check2" id="check2" value="0">
                             Visitante
                             </label>
                             </div>
@@ -197,6 +197,7 @@
         var pkhasta= new Pikaday(
         {
             field: document.getElementById('txthasta'),
+            firstDay: 1,
             position: 'auto',
             format: 'DD/MM/YYYY',
             yearRange: [2000,2050]
@@ -211,7 +212,9 @@
 
         $('#txtdesde').on('change', function(){
             activapicker();
-    });
+        });
+
+
     
     
     

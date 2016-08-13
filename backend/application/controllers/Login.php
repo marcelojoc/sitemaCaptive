@@ -28,7 +28,7 @@ class Login extends CI_Controller {
 			// comprueba si hay sesion configurada
 			if($this->session->userdata('logged_in')){
 
-				$this->load->view('backend/home_view'); // muestro la vista de form login
+				$this->load->view('backend/busqueda_view'); // muestro la vista de form login
 
 			} else {
 				

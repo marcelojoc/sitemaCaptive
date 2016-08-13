@@ -61,39 +61,50 @@ class Home extends CI_Controller {
 
     if ($this->session->userdata('logged_in')!= NULL) {
 
+//d($_POST);
       $desde= $this->input->post('txtdesde');
       $hasta= $this->input->post('txthasta');
+      
 
 
-      if($desde=="" ){
+      if(isset($desde) && $desde == '' || isset($hasta) && $hasta == '' ){
 
           redirect('home/','refresh');
           
-      }
+      }else{
 
 
+// huesped= 1   visitante = 0
+      //d(date_format($minvalue, 'YY-mm-dd'));
+          $minvalue= date("Y-m-d", strtotime(str_replace('/','-',$desde)));
+          $maxvalue= date("Y-m-d", strtotime(str_replace('/','-',$hasta)));
 
-  //d(date_format($minvalue, 'YY-mm-dd'));
-      $minvalue= date("Y-m-d", strtotime(str_replace('/','-',$desde)));
-      $maxvalue= date("Y-m-d", strtotime(str_replace('/','-',$hasta)));
+          
+          $crud = new grocery_CRUD();
 
-      
-      $crud = new grocery_CRUD();
-      $crud->where("checkin BETWEEN '$minvalue' AND '$maxvalue'");
-      $crud->where("huesped = 1");
-      $crud->set_subject('huespedes entre   y entre');
-      $crud->set_table('creds');
-      $crud->columns('name','mac','email','checkin','checkout');
-      $crud->display_as('checkin','ingreso')
-           ->display_as('checkout', 'Salida');
-      $crud->unset_add();  // sacar el boton agregar campo
-      $crud->unset_edit();
-      $output = $crud->render();
+          $crud->set_table('creds');
 
-     $this->load->view('backend/visita_g', $output);
+          $crud->set_relation('huesped','tipo','valor');
 
-    //d($plantilla);
 
+                    $crud->where("checkin BETWEEN '$minvalue' AND '$maxvalue'");
+          $crud->where("tipo = 0");
+
+          $crud->columns('name','email','checkin','checkout', 'huesped');
+          $crud->display_as('checkin','ingreso');
+          $crud->display_as('name', 'Nombre')
+
+              ->display_as('checkout', 'Salida');
+          $crud->unset_add();  // sacar el boton agregar campo
+          $crud->unset_edit();
+          $crud->unset_read();
+        
+          $output = $crud->render();
+
+        $this->load->view('backend/visita_g', $output);
+
+   
+     }
 
     } else {
       //echo " no hay sesion";

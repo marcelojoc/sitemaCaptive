@@ -72,7 +72,7 @@ foreach($css_files as $file): ?>
 						<div class="panel-title">Busqueda</div>
 
 							<div class="panel-options">
-							<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+							<a href="<?php echo base_url()."index.php/home/"?>" data-rel="collapse"><i class="glyphicon glyphicon-arrow-left">  Busqueda</i></a>
 							</div>
 						</div>
 						<div class="content-box-large box-with-header" >
