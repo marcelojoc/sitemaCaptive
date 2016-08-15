@@ -8,7 +8,7 @@
 body{
 
 font-family: "Saya";
-font-size: 1.9em;
+font-size: 1.95em;
 }
 
 input[type=text ] {
@@ -37,8 +37,8 @@ input[type=email ] {
 .btn-ttc:active {
   color: #fff;
   text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.25);
-  background-color: #009ED2;
-  border: solid 1px #008FBF;
+  background-color: #000;
+  border: solid 1px gray;
 }
  
 
@@ -47,7 +47,7 @@ input[type=email ] {
 
 .btn-ttc:hover {
   background-position: 0 -15px;
-  background-color: #008FBF;
+  background-color: #A1A3A6;
   color: #fff;
 }
 

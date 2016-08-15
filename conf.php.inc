@@ -15,7 +15,7 @@ ini_set('display_errors', '1');
 $mysql_db = "diplomatic";
 $mysql_host = "localhost"; //If the MySQL server is running on the same server as the web auth page
 $mysql_user = "root"; //Change to the appropriate user that has access to DB/table
-$mysql_pass = ""; //Change to the appropriate password for the user above
+$mysql_pass = "root"; //Change to the appropriate password for the user above
 $table = "creds";  //Change to the appropriate table name
 
 //UniFi server credentials

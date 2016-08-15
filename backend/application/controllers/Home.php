@@ -36,46 +36,24 @@ class Home extends CI_Controller {
     public function buscar()
   {
 
+    if ($this->session->userdata('logged_in')!= NULL) {   // me fijo si hay sesion iniciada, si no lo mando a login
 
-  // $this->form_validation->set_rules('txtdesde', 'txtdesde', 'trim|required');
-
-  // $this->form_validation->set_rules('txthasta', 'txthasta', 'trim|required');
-
-  // if($this->form_validation->run() == FALSE)
-  // {
-  //   //si falla manda mensaje de error
-  //   d($this->form_validation->run());
-	// 			$this->form_validation->set_message('required','Completar los campos de fechas');
-				
-  // }
-
-  // else
-  // {
-  //   //Accede al area privada
-  //  d($_POST);
-  //  echo('saaaaaaaaaaaaaaaaaaaa');
-  // }
-
-
-
-
-    if ($this->session->userdata('logged_in')!= NULL) {
-
-//d($_POST);
+      // captur todos los datos post incluso el boton
+      $tipo= $this->input->post('check');
       $desde= $this->input->post('txtdesde');
       $hasta= $this->input->post('txthasta');
-      
+      $boton = $this->input->post('btn');
 
-
-      if(isset($desde) && $desde == '' || isset($hasta) && $hasta == '' ){
+      // si el boton no viene por post  es por que entraron sin el form, deben volver a home
+      if($boton =="" ){
 
           redirect('home/','refresh');
           
       }else{
 
 
-// huesped= 1   visitante = 0
-      //d(date_format($minvalue, 'YY-mm-dd'));
+         // huesped= 1   visitante = 0
+
           $minvalue= date("Y-m-d", strtotime(str_replace('/','-',$desde)));
           $maxvalue= date("Y-m-d", strtotime(str_replace('/','-',$hasta)));
 
@@ -87,8 +65,14 @@ class Home extends CI_Controller {
           $crud->set_relation('huesped','tipo','valor');
 
 
-                    $crud->where("checkin BETWEEN '$minvalue' AND '$maxvalue'");
-          $crud->where("tipo = 0");
+          $crud->where("checkin BETWEEN '$minvalue' AND '$maxvalue'");
+
+          if(count($tipo)< 2){    // si es menor a dos quiere decir que solo tildaron una opcion o voso  o hues
+
+          $crud->where("tipo = $tipo[0]");
+
+          }
+
 
           $crud->columns('name','email','checkin','checkout', 'huesped');
           $crud->display_as('checkin','ingreso');

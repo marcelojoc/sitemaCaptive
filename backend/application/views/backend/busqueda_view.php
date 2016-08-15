@@ -124,13 +124,13 @@
                         <div class="col-md-4">
                         <div class="checkbox-inline">
                             <label for="checkboxes-0">
-                            <input type="checkbox" name="check1" id="check1" value="1">
+                            <input type="checkbox" name="check[]" id="check1" value="1">
                             Huesped
                             </label>
                             </div>
                         <div class="checkbox-inline">
                             <label for="checkboxes-1">
-                            <input type="checkbox" name="check2" id="check2" value="0">
+                            <input type="checkbox" name="check[]" id="check2" value="0">
                             Visitante
                             </label>
                             </div>
@@ -215,9 +215,45 @@
         });
 
 
+        $('#form_log').submit( function(){
+            
+            /*que debo hacer cuando ejeuto el evento sumbit?
+            comprobar que los input no esten vacios
+            */
+
+            if($('#txtdesde').val()!= "" && $('#txthasta').val()!= "" ){
+
+                if (validarCheck()){
+                    return true
+
+                }else{
+
+                    alert("Debes seleccionar al menos una opcion Visitante y/o Huesped");
+                    return false;
+                }
+
+                    
+            }else{
+                    alert("Debes completar los campos de fechas");
+                    return false;
+                    
+            }
+
+            
+        });    
     
-    
-    
+    function validarCheck(){
+
+        if($('#check1').is(':checked') || $('#check2').is(':checked')){
+
+            return true;
+
+        }else{
+
+            return false
+        }
+
+    }
     
     
     
