@@ -64,7 +64,6 @@ class Home extends CI_Controller {
 
           $crud->set_relation('huesped','tipo','valor');
 
-
           $crud->where("checkin BETWEEN '$minvalue' AND '$maxvalue'");
 
           if(count($tipo)< 2){    // si es menor a dos quiere decir que solo tildaron una opcion o voso  o hues
@@ -73,7 +72,6 @@ class Home extends CI_Controller {
 
           }
 
-
           $crud->columns('name','email','checkin','checkout', 'huesped');
           $crud->display_as('checkin','ingreso');
           $crud->display_as('name', 'Nombre')
@@ -81,6 +79,7 @@ class Home extends CI_Controller {
               ->display_as('checkout', 'Salida');
           $crud->unset_add();  // sacar el boton agregar campo
           $crud->unset_edit();
+          $crud->unset_delete();
           $crud->unset_read();
         
           $output = $crud->render();

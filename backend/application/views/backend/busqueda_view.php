@@ -228,14 +228,11 @@
                     return false;
                 }
 
-                    
             }else{
                     alert("Debes completar los campos de fechas");
-                    return false;
-                    
+                    return false;        
             }
-
-            
+  
         });    
     
     function validarCheck(){
@@ -250,18 +247,8 @@
         }
 
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
     })();
-
-
-
 
 </script>
 
