@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bootstrap Admin Theme v3</title>
+    <title>Administracion Hotel Diplomatic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     
@@ -20,7 +20,7 @@
 	           <div class="col-md-6">
 	              <!-- Logo -->
 	              <div class="logo">
-	                 <h1><a href="">Hotel Diplomatic</a></h1>
+	                 <h1><a href="">Diplomatic Admin</a></h1>
 	              </div>
 	           </div>
 
@@ -30,11 +30,7 @@
 	                  <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
 	                    <ul class="nav navbar-nav">
 	                      <li class="dropdown">
-	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $this->session->logged_in['nombre'] ?><b class="caret"></b></a>
-	                        <ul class="dropdown-menu animated fadeInUp">
-	                          <li><a href="profile.html"><?php echo $this->session->logged_in['nick'] ?> </a></li>
-	                          <li><a href="login/out">Logout</a></li>
-	                        </ul>
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo "Bienvenido ". $this->session->logged_in['nombre'] ?></a>
 	                      </li>
 	                    </ul>
 	                  </nav>
@@ -124,13 +120,13 @@
                         <div class="col-md-4">
                         <div class="checkbox-inline">
                             <label for="checkboxes-0">
-                            <input type="checkbox" name="check[]" id="check1" value="1">
+                            <input type="checkbox" name="check[]" id="check1" value="1" checked>
                             Huesped
                             </label>
                             </div>
                         <div class="checkbox-inline">
                             <label for="checkboxes-1">
-                            <input type="checkbox" name="check[]" id="check2" value="0">
+                            <input type="checkbox" name="check[]" id="check2" value="0" checked>
                             Visitante
                             </label>
                             </div>
